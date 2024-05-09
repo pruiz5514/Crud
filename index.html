@@ -9,6 +9,31 @@
 <body>
     <header></header>
     <main class="container">
+
+    <form action="./index.html" method="post">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" required id="name" name="name" placeholder="name">
+        <label for="name">Name</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" required id="last-name" name="last-name" placeholder="Last name">
+        <label for="name">Last name</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" required id="email" name="email" placeholder="Email">
+        <label for="name">Email</label>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-success">Save</button>
+        <button type="reset" class="btn btn-danger">Cancel</button>
+      </div>
+
+
+    </form>
+
       <table class="table table-striped table-hover">
         <thead>
           <tr>

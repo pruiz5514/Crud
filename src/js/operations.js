@@ -1,17 +1,48 @@
-function withForOF(){
-    for (const coder of coders){
-        tbody.innerHTML += `
-        <tr>
-            <th scope="row">${coder.id}</th>
-            <td>${coder.name}</td>
-            <td>${coder.lastName}</td>
-            <td>${coder.email}</td>
-        </tr>
-        `
-    }
-}
+// function withForOF(){
+//     for (const coder of coders){
+//         tbody.innerHTML += `
+//         <tr>
+//             <th scope="row">${coder.id}</th>
+//             <td>${coder.name}</td>
+//             <td>${coder.lastName}</td>
+//             <td>${coder.email}</td>
+//         </tr>
+//         `
+//     }
+// }
+
+
+// function withFor(){
+//     for (let i=0; i<coders.length; i++){
+//         tbody.innerHTML += `
+//         <tr>
+//             <th scope="row">${coders[i].id}</th>
+//             <td>${coders[i].name}</td>
+//             <td>${coders[i].lastName}</td>
+//             <td>${coders[i].email}</td>
+//         </tr>
+//         `
+//     }
+// }
+
+// function withForIn(){
+//     for (const i in coders){
+//         tbody.innerHTML += `
+//         <tr>
+//             <th scope="row">${coders[i].id}</th>
+//             <td>${coders[i].name}</td>
+//             <td>${coders[i].lastName}</td>
+//             <td>${coders[i].email}</td>
+//         </tr>
+//         `
+//     }
+// }
+
 
 export function withForEach(coders, tbody){
+
+    tbody.innerHTML= ""
+
     coders.forEach(coder => {
         tbody.innerHTML += `
         <tr>
@@ -24,29 +55,13 @@ export function withForEach(coders, tbody){
     })
 }
 
-function withFor(){
-    for (let i=0; i<coders.length; i++){
-        tbody.innerHTML += `
-        <tr>
-            <th scope="row">${coders[i].id}</th>
-            <td>${coders[i].name}</td>
-            <td>${coders[i].lastName}</td>
-            <td>${coders[i].email}</td>
-        </tr>
-        `
+export function create(name, lastName, email, coders){
+    const newCoder = {
+        id: Date.now(),
+        name: name.value,
+        lastName: lastName.value,
+        email: email.value
     }
-}
 
-function withForIn(){
-    for (const i in coders){
-        tbody.innerHTML += `
-        <tr>
-            <th scope="row">${coders[i].id}</th>
-            <td>${coders[i].name}</td>
-            <td>${coders[i].lastName}</td>
-            <td>${coders[i].email}</td>
-        </tr>
-        `
-    }
+    coders.push(newCoder);
 }
-
